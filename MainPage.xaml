@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FoodApp.MainPage"
+             Title="美食助手">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="15" Padding="20">
+            <Label Text="🥗 食物与饮品助手"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="输入你想吃的食物："
+                   FontSize="16" />
+
+            <Entry x:Name="FoodEntry"
+                   Placeholder="例如：披萨, 沙拉, 咖啡..."
+                   FontSize="16" />
+
+            <Button x:Name="RecommendButton"
+                    Text="推荐食谱 / 搭配"
+                    Clicked="OnRecommendClicked"
+                    BackgroundColor="Green"
+                    TextColor="White" />
+
+            <Label x:Name="ResultLabel"
+                   FontSize="16"
+                   LineBreakMode="WordWrap" />
+
+            <!-- 硬件功能按钮区域 -->
+            <Label Text="🔧 硬件功能"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   Margin="0,10,0,5" />
+
+            <Button Text="🔊 语音读出推荐"
+                    Clicked="OnSpeakClicked"
+                    BackgroundColor="Blue"
+                    TextColor="White" />
+
+            <Button Text="📍 查找附近餐厅"
+                    Clicked="OnNearbyClicked"
+                    BackgroundColor="Orange"
+                    TextColor="White" />
+
+            <Button Text="📸 拍照识别食物"
+                    Clicked="OnTakePhotoClicked"
+                    BackgroundColor="Purple"
+                    TextColor="White" />
+
+            <Image x:Name="CapturedImage"
+                   HeightRequest="150"
+                   Aspect="AspectFill"
+                   HorizontalOptions="Center" />
+
+            <!-- 可访问性：主题切换按钮 -->
+            <Button Text="🌓 切换主题 (亮色/暗色)"
+                    Clicked="OnToggleThemeClicked"
+                    BackgroundColor="Gray"
+                    TextColor="White" />
+            <Button Text="🎲 模拟摇一摇 (测试)"
+        Clicked="OnSimulateShakeClicked"
+        BackgroundColor="DarkCyan"
+        TextColor="White" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
