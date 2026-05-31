@@ -7,62 +7,85 @@
     <ScrollView>
         <VerticalStackLayout Spacing="15" Padding="20">
             <Label Text="🥗 食物与饮品助手"
-                   FontSize="24"
                    FontAttributes="Bold"
-                   HorizontalOptions="Center" />
+                   HorizontalOptions="Center"
+                   SemanticProperties.Description="食物与饮品助手标题" />
 
             <Label Text="输入你想吃的食物："
-                   FontSize="16" />
+                   SemanticProperties.Description="输入提示标签" />
 
             <Entry x:Name="FoodEntry"
                    Placeholder="例如：披萨, 沙拉, 咖啡..."
-                   FontSize="16" />
+                   SemanticProperties.Description="食物输入框"
+                   SemanticProperties.Hint="在此输入你想吃的食物名称，例如披萨或沙拉" />
 
             <Button x:Name="RecommendButton"
                     Text="推荐食谱 / 搭配"
                     Clicked="OnRecommendClicked"
                     BackgroundColor="Green"
-                    TextColor="White" />
+                    TextColor="White"
+                    SemanticProperties.Description="推荐食谱按钮"
+                    SemanticProperties.Hint="点击后根据输入的食物推荐搭配" />
 
             <Label x:Name="ResultLabel"
-                   FontSize="16"
-                   LineBreakMode="WordWrap" />
+                   LineBreakMode="WordWrap"
+                   SemanticProperties.Description="推荐结果标签"
+                   SemanticProperties.Hint="这里是食物的推荐搭配结果" />
 
-            <!-- 硬件功能按钮区域 -->
+            <Button Text="❓ 使用帮助"
+                    Clicked="OnHelpClicked"
+                    BackgroundColor="DarkSlateGray"
+                    TextColor="White"
+                    Margin="0,10,0,0"
+                    SemanticProperties.Description="帮助按钮"
+                    SemanticProperties.Hint="查看如何使用本应用" />
+
             <Label Text="🔧 硬件功能"
-                   FontSize="18"
                    FontAttributes="Bold"
-                   Margin="0,10,0,5" />
+                   Margin="0,10,0,5"
+                   SemanticProperties.Description="硬件功能区域标题" />
 
             <Button Text="🔊 语音读出推荐"
                     Clicked="OnSpeakClicked"
                     BackgroundColor="Blue"
-                    TextColor="White" />
+                    TextColor="White"
+                    SemanticProperties.Description="语音读出推荐"
+                    SemanticProperties.Hint="朗读刚才显示的推荐内容" />
 
             <Button Text="📍 查找附近餐厅"
                     Clicked="OnNearbyClicked"
                     BackgroundColor="Orange"
-                    TextColor="White" />
+                    TextColor="White"
+                    SemanticProperties.Description="查找附近餐厅"
+                    SemanticProperties.Hint="获取您当前的位置并显示附近餐厅示例" />
 
             <Button Text="📸 拍照识别食物"
                     Clicked="OnTakePhotoClicked"
                     BackgroundColor="Purple"
-                    TextColor="White" />
+                    TextColor="White"
+                    SemanticProperties.Description="拍照识别食物"
+                    SemanticProperties.Hint="打开相机拍摄食物照片" />
 
             <Image x:Name="CapturedImage"
                    HeightRequest="150"
                    Aspect="AspectFill"
-                   HorizontalOptions="Center" />
+                   HorizontalOptions="Center"
+                   SemanticProperties.Description="拍摄的照片"
+                   SemanticProperties.Hint="显示您刚才拍摄的食物照片" />
 
-            <!-- 可访问性：主题切换按钮 -->
             <Button Text="🌓 切换主题 (亮色/暗色)"
                     Clicked="OnToggleThemeClicked"
                     BackgroundColor="Gray"
-                    TextColor="White" />
+                    TextColor="White"
+                    SemanticProperties.Description="切换主题"
+                    SemanticProperties.Hint="在亮色主题和暗色主题之间切换" />
+
             <Button Text="🎲 模拟摇一摇 (测试)"
-        Clicked="OnSimulateShakeClicked"
-        BackgroundColor="DarkCyan"
-        TextColor="White" />
+                    Clicked="OnSimulateShakeClicked"
+                    BackgroundColor="DarkCyan"
+                    TextColor="White"
+                    SemanticProperties.Description="模拟摇一摇"
+                    SemanticProperties.Hint="随机选择一个食物并推荐搭配" />
 
         </VerticalStackLayout>
     </ScrollView>
